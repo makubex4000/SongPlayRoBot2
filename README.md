@@ -1,6 +1,6 @@
 ### SongPlayRoBot
 ```
-您可以從youtube下載 MP3到telegram
+您可以從youtube下載MP3到telegram
 ```
 
 ## 部署 - 最簡單的方式
