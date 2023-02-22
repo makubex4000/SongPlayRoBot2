@@ -37,13 +37,13 @@ async def start(client, message):
     )
 
 
-@Client.on_message(filters.command(['song']))
+@Client.on_message(filters.command(['s']))
 def a(client, message):
     query = ''
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('`Searching... Please Wait...`')
+    m = message.reply('`正在搜索...請稍候...`')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -67,28 +67,28 @@ def a(client, message):
             #     m.edit("Exceeded 30mins cap")
             #     return
 
-            performer = f"[@mwkBoTs]" 
+            performer = f"[@Sawamura_Ha_ru_ka_bot]" 
             thumb_name = f'thumb{message.message_id}.jpg'
             thumb = requests.get(thumbnail, allow_redirects=True)
             open(thumb_name, 'wb').write(thumb.content)
 
         except Exception as e:
             print(e)
-            m.edit('**👎 Nothing found Retry with another !**')
+            m.edit('**沒有搜尋到 用另一個重試！**')
             return
     except Exception as e:
         m.edit(
-            "**Enter Song Name with /song Command!**"
+            "**使用 /s 輸入歌曲名稱！**"
         )
         print(str(e))
         return
-    m.edit("`Bruh... Uploading... Please Wait...`")
+    m.edit("`正在上傳...請稍候...`")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎶 <b>Title:</b> <a href="{link}">{title}</a>\n⌚ <b>Duration:</b> <code>{duration}</code>\n📻 <b>Uploaded By:</b> <a href="https://t.me/mwklinks">MwK Song Bot</a>'
+        rep = f'🎧  <b>標題:</b> <a href="{link}">{title}</a>\n⏳ <b>歌曲時間:</b> <code>{duration}</code>'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -96,7 +96,7 @@ def a(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=performer, thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit('**An internal Error Occured, Report This @redbullfed!!**')
+        m.edit('**發生內部錯誤，向報告@Kevin_RX！！**')
         print(e)
     try:
         os.remove(audio_file)
