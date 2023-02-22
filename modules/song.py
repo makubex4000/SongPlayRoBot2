@@ -9,12 +9,12 @@ import time
 from config import Config
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-ABS="開發商"
+ABS="源代碼"
 APPER="shamilhabeeb"
 OWNER="所有者"
-GITCLONE="github.com/makubex2010/SongPlayRoBot"
-B2="telegram.dog/shamilhabeeb"
-BUTTON1="📜 源代碼 📜"
+GITCLONE="https://t.me/PlayStationTw"
+B2="github.com/makubex2010/SongPlayRoBot"
+BUTTON1="🎮 PlayStation 世界玩家會館 🎮"
 
 def time_to_seconds(time):
     stringt = str(time)
@@ -62,10 +62,10 @@ def a(client, message):
             duration = results[0]["duration"]
             views = results[0]["views"]
 
-            ## UNCOMMENT THIS IF YOU WANT A LIMIT ON DURATION. CHANGE 1800 TO YOUR OWN PREFFERED DURATION AND EDIT THE MESSAGE (30 minutes cap) LIMIT IN SECONDS
-            # if time_to_seconds(duration) >= 7000:  # duration limit
-            #     m.edit("Exceeded 30mins cap")
-            #     return
+             ## 如果您想限制持續時間，請取消註釋。 將 1800 更改為您自己的首選持續時間並編輯消息（30 分鐘上限）限制在幾秒鐘內
+             # if time_to_seconds(duration) >= 7000: # 持續時間限制
+             # m.edit("超過 30 分鐘上限")
+             # 返回
 
             performer = f""
             thumb_name = f'thumb{message.message_id}.jpg'
@@ -96,7 +96,7 @@ def a(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=performer, thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit('**發生內部錯誤，向報告@Kevin_RX！！**')
+        m.edit('**❌ 發生內部錯誤，向報告@Kevin_RX！！**')
         print(e)
     try:
         os.remove(audio_file)
