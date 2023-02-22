@@ -9,12 +9,12 @@ import time
 from config import Config
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-ABS="Developer"
+ABS="開發商"
 APPER="shamilhabeeb"
-OWNER="Owner"
-GITCLONE="github.com/shamilhabeebnelli/song-bot"
+OWNER="所有者"
+GITCLONE="github.com/makubex2010/SongPlayRoBot"
 B2="telegram.dog/shamilhabeeb"
-BUTTON1="📜 Source Code 📜"
+BUTTON1="📜 源代碼 📜"
 
 def time_to_seconds(time):
     stringt = str(time)
@@ -67,7 +67,6 @@ def a(client, message):
             #     m.edit("Exceeded 30mins cap")
             #     return
 
-            performer = f"[]" 
             thumb_name = f'thumb{message.message_id}.jpg'
             thumb = requests.get(thumbnail, allow_redirects=True)
             open(thumb_name, 'wb').write(thumb.content)
@@ -82,13 +81,13 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("`正在上傳...請稍候...`")
+    m.edit("🔎 找到歌曲 🎶 請稍等 ⏳️ 幾秒鐘 [🚀](https://telegra.ph/file/d0a3a739f8a9b7e86e1f6.mp4)")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎧  <b>標題:</b> <a href="{link}">{title}</a>\n⏳ <b>歌曲時間:</b> <code>{duration}</code>'
+        rep = f'🎧  <b>標題 : </b> <a href="{link}">{title}</a>\n⏳ <b>歌曲時間 : </b> <code>{duration}</code>'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
