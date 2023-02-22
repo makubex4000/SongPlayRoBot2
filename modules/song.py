@@ -67,14 +67,14 @@ def a(client, message):
             #     m.edit("Exceeded 30mins cap")
             #     return
 
-            performer = f"[@Sawamura_Ha_ru_ka_bot]" 
+            performer = f"[]" 
             thumb_name = f'thumb{message.message_id}.jpg'
             thumb = requests.get(thumbnail, allow_redirects=True)
             open(thumb_name, 'wb').write(thumb.content)
 
         except Exception as e:
             print(e)
-            m.edit('**沒有搜尋到 用另一個重試！**')
+            m.edit('**沒有搜尋到！請用另一種方式搜尋**')
             return
     except Exception as e:
         m.edit(
