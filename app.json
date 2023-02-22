@@ -2,6 +2,7 @@
     "name": "SongPlayRoBot",
     "description": "A Modular telegram song bot.",
     "repository": "https://github.com/makubex2010/SongPlayRoBot",
+    "logo": "https://i.imgur.com/RYqwBHA.jpg",
     "keywords": [
        
         "telegram bot",
