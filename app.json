@@ -1,7 +1,7 @@
 {
-    "name": "Song-Bot",
+    "name": "SongPlayRoBot",
     "description": "A Modular telegram song bot.",
-    "repository": "https://github.com/shamilhabeebnelli/Song-Bot",
+    "repository": "https://github.com/makubex2010/SongPlayRoBot",
     "keywords": [
        
         "telegram bot",
@@ -23,7 +23,7 @@
         },
         "START_MSG": {
             "description": "Start Message of BoT",
-            "value": "<b>Hi {},\nIam A Simple Youtube to Mp3 Downloader Bot,</b>\n\nSend me Any Songs name with /song command"
+            "value": "<b>Hi {},\nIam A Simple Youtube to Mp3 Downloader Bot,</b>\n\nSend me Any Songs name with /s command"
         },
         "START_IMG": {
             "description": "Start Message's Photo.",
