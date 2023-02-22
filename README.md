@@ -1,16 +1,15 @@
-### song-bot
+### SongPlayRoBot
 ```
-You can download youtube to MP3 from telegram bot #musics
-with & without commands
+您可以從youtube下載 MP3到telegram
 ```
 
-## Deploy - Simplest Way
-##### Deploy - with /song command
+## 部署 - 最簡單的方式
+##### 部署 - 使用指令版
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/shamilhabeebnelli/song-bot/tree/main)
 
-##### Deploy - Without Command
+##### 部署 - 沒有指令版!!
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/shamilhabeebnelli/song-bot/tree/Without-CMD)
 
-## Deploy Hard Way
-No Any Hard Ways Deploy simple way 🤗🤣
+## 艱難部署
+沒有任何困難的方法部署簡單的方法 🤗🤣
