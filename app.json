@@ -11,27 +11,27 @@
     ],
     "env": {
         "APP_ID": {
-            "description": "Get this value from my.telegram.org",
+            "description": "從 my.telegram.org 取得",
             "value": ""
         },
         "API_HASH": {
-            "description": "Get this value from my.telegram.org",
+            "description": "從 my.telegram.org 取得",
             "value": ""
         },
         "OWNER": {
-            "description": "Your username without @.",
-            "value": "shamilhabeeb"
+            "description": "您的用戶名不帶@。",
+            "value": "Kevin_RX"
         },
         "START_MSG": {
-            "description": "Start Message of BoT",
-            "value": "<b>Hi {},\nIam A Simple Youtube to Mp3 Downloader Bot,</b>\n\nSend me Any Songs name with /s command"
+            "description": "BoT的啟動消息",
+            "value": "<b>嗨! {}, 我是 🎸歌曲播放機器人，</b>發送你想要的歌名或網址... 😍🥰🤗例如:/s 南拳媽媽-下雨天"
         },
         "START_IMG": {
-            "description": "Start Message's Photo.",
-            "value": "https://telegra.ph/file/2a35fca576aa49de77c98.jpg"
+            "description": "啟動消息的照片。",
+            "value": "https://telegra.ph/file/d0cdeca30d2082b437645.jpg"
         },
         "BOT_TOKEN": {
-            "description": "ID of the message to edit.",
+            "description": "https://t.me/BotFather取得",
             "value": ""
         }
     },
