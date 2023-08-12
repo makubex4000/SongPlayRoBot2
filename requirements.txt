@@ -2,3 +2,4 @@ Pyrogram==1.2.9
 TgCrypto==1.2.2
 requests
 ffmpeg-python
+yt_dlp
